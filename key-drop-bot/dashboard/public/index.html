@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Key Drop setup</title>
+    <link rel="stylesheet" href="/dashboard.css?v=20261010-7">
+    <script src="/dashboard.js?v=20261007-3" defer></script>
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">KEY DROP BOT</p>
+          <h1>Server setup</h1>
+        </div>
+        <a class="button" href="/stock" target="_blank" rel="noreferrer">Public stock</a>
+        <div id="account" class="account" hidden>
+          <span id="username"></span>
+          <button id="logout" class="button quiet" type="button">Sign out</button>
+        </div>
+      </header>
+
+      <section id="signin" class="card signin" hidden>
+        <h2>Set up your server, all in one place</h2>
+        <p>Sign in with Discord. You’ll only see servers where the bot is present and you have Administrator permission.</p>
+        <a class="button primary" href="/auth/login">Continue with Discord</a>
+      </section>
+
+      <section id="dashboard" hidden>
+        <div class="server-bar card">
+          <label for="guild-select">Server</label>
+          <select id="guild-select"></select>
+          <button id="reload-settings" class="button" type="button" title="Discard unsaved edits and reload saved bot settings">Reload saved data</button>
+          <button id="save" class="button primary" type="button">Save settings</button>
+          <span id="status" role="status"></span>
+        </div>
+
+        <div class="layout">
+          <nav class="tabs card" aria-label="Settings">
+            <button class="tab active" data-tab="overview">Overview</button>
+            <button class="tab" data-tab="channels">Channels</button>
+            <button class="tab" data-tab="products">Generators</button>
+            <button class="tab" data-tab="tiers">Tiers</button>
+            <button class="tab" data-tab="categories">Categories</button>
+            <button class="tab" data-tab="inventory">Inventory</button>
+            <button class="tab" data-tab="events">Events</button>
+            <button class="tab" data-tab="shop">Shop</button>
+            <button class="tab" data-tab="credits">Credits &amp; stats</button>
+            <button class="tab" data-tab="ai-builder">AI builder</button>
+            <button class="tab" data-tab="member-tools">Member tools</button>
+            <button class="tab" data-tab="appearance">Appearance</button>
+            <button class="tab" data-tab="options">Options</button>
+            <button class="tab" data-tab="copy">Copy settings</button>
+          </nav>
+          <div id="panel" class="panel"></div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

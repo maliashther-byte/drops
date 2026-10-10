@@ -1,0 +1,12 @@
+{
+  "name": "key-drop",
+  "private": true,
+  "workspaces": [
+    "key-drop-bot"
+  ],
+  "scripts": {
+    "start": "npm start --workspace=key-drop-bot",
+    "dev": "npm run dev --workspace=key-drop-bot",
+    "deploy-commands": "npm run deploy-commands --workspace=key-drop-bot"
+  }
+}
